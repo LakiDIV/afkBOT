@@ -5,5 +5,7 @@ import time
 while True:
     x = random.randint(600,700)
     y = random.randint(200,600)
-    pag.moveTo(x,y,0.5)
-    time.sleep(2)
+    speed = random.uniform(0.5, 1.0)
+    timer = random.uniform(2.0, 5.0)
+    pag.moveTo(x,y,speed)
+    time.sleep(timer)
