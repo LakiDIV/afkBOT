@@ -8,8 +8,18 @@ import keyboard
 use_full_res = False
 use_win32API_movement = True
 
-# ! Need to hold down the key to stop
-while keyboard.is_pressed('q') == False:
+break_loop_flag = False
+
+def handle_q_button():
+    print('q pressed')
+    global break_loop_flag
+    break_loop_flag = True
+
+keyboard.add_hotkey('q', handle_q_button)
+
+while True:
+    if break_loop_flag:
+        break
     timer = random.uniform(2.0, 5.0)
     if use_full_res:
         x = random.randint(0, win32api.GetSystemMetrics(0))
