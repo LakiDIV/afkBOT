@@ -7,7 +7,6 @@ import keyboard
 # Root
 use_full_res = False
 use_win32API_movement = True
-
 break_loop_flag = False
 
 def handle_q_button():
@@ -17,6 +16,7 @@ def handle_q_button():
 
 keyboard.add_hotkey('q', handle_q_button)
 
+# Process
 while True:
     if break_loop_flag:
         break
