@@ -10,6 +10,7 @@ use_win32API_movement = True
 break_loop_flag = False
 
 def handle_q_button():
+    """Use q button to break the function"""
     print('q pressed')
     global break_loop_flag
     break_loop_flag = True
